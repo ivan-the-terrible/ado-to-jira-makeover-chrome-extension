@@ -1,0 +1,108 @@
+[role='navigation'],
+[data-renderedregion="content-header"],
+.global-message-banner > *,
+.bolt-page,
+.bolt-header,
+.bolt-header > *,
+.boards-tabbar-tabs,
+.hub-group-container,
+.hub-group-container > *
+ {
+  background-color: #fff !important;
+}
+
+/* Top Right Search Bar */
+.search {
+  border: 1px solid #8C8F97 !important;
+  border-radius: 6px !important;
+  font: normal 400 14px / 20px 'Atlassian Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif !important;
+}
+
+/* Left Side Bar */
+.hub-group-container > * {
+  color: #505258 !important;
+}
+
+.hub-group-container > *:hover {
+  background-color: #f0f1f2 !important;
+  border-radius: 8px !important;
+}
+
+.navigation-text {
+  font: normal 500 14px / 20px 'Atlassian Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif !important;
+}
+
+.hub.displayed {
+  color: #0c66e4 !important;
+  background-color: #e9f2fe !important;
+  border-radius: 8px !important;
+}
+
+.hub.displayed:hover {
+  background-color: #cfe1fd !important;
+  border-radius: 8px !important;
+}
+
+/* Primary Title of Project */
+.directory-selector-dropdown {
+  font: normal 500 20pt / 24px 'Atlassian Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif !important;
+}
+
+.bolt-header-title-area {
+  font: normal 500 14px 'Atlassian Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif !important;
+}
+
+/* Menu options (like Board and Analytics) */
+.boards-tabs-header {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  border-bottom: 2px solid #0B120E24 !important;
+}
+
+.bolt-tab[aria-selected="true"] {
+  color: #1868DB !important;
+}
+
+.bolt-tab[aria-selected="false"] {
+  color: #505258 !important;
+}
+
+.bolt-tab[aria-selected="false"]:hover {
+  color: #1868DB !important;
+}
+
+.bolt-tab[aria-selected="false"] > .bolt-tab-inner-container:hover {
+  border-bottom: 2px solid #1868DB !important;
+}
+
+.bolt-tab[aria-selected="true"] > .bolt-tab-inner-container:has(.bolt-tab-text[data-content="Board"])::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='rgb(24, 104, 219)' fill-rule='evenodd' d='M2 3.5a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h2.833v-9zm4.333 0v9h3.334v-9zm4.834 0v9H14a.5.5 0 0 0 .5-.5V4a.5.5 0 0 0-.5-.5zM0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z' clip-rule='evenodd'></path></svg>");
+  padding-top: 13px;
+}
+
+.bolt-tab[aria-selected="false"] > .bolt-tab-inner-container:has(.bolt-tab-text[data-content="Board"])::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='rgb(80, 82, 88)' fill-rule='evenodd' d='M2 3.5a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h2.833v-9zm4.333 0v9h3.334v-9zm4.834 0v9H14a.5.5 0 0 0 .5-.5V4a.5.5 0 0 0-.5-.5zM0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z' clip-rule='evenodd'></path></svg>");
+  padding-top: 13px;
+}
+
+/* Kanban Board */
+.kanban-board-column-header-container {
+  color: #626f86 !important;
+  text-transform: uppercase !important;
+  font: normal 600 9pt / 1pc 'Atlassian Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif !important;
+  margin-bottom: 0px !important;
+}
+
+.kanban-board-column-header {
+  background-color: #f4f4f4 !important;
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+.kanban-board-column {
+  border-top-color:#f4f4f4 !important;
+}
+
+.work-item-state-container {
+  display: none !important;
+}

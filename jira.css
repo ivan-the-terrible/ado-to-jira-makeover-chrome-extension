@@ -43,6 +43,116 @@
   border-radius: 8px !important;
 }
 
+/* Hide sidebar images (to be replaced with Jira SVGs) */
+.navigation-section > .hub-group-container > .bolt-expandable-container > a > .navigation-icon {
+  display: none !important;
+}
+/* Special case of sidebar image: when dropdown menu activated in sidebar (to be replaced with Jira SVG) */
+.navigation-section > .hub-group-container > a[aria-label="Artifacts"] > .navigation-icon {
+  display: none !important;
+}
+
+.navigation-section > .hub-group-container > a[aria-label="Overview"][id="__bolt-ms-vss-work-web-work-hub-group-link"] > .navigation-icon {
+  display: none !important;
+} /* There are more than 1 menu items with this aria-label, hence the ID */
+
+.navigation-section > .hub-group-container > a[aria-label="Boards"][id="__bolt-ms-vss-work-web-work-hub-group-link"] > .navigation-icon {
+  display: none !important;
+}
+
+.navigation-section > .hub-group-container > a[aria-label="Repos"][id="__bolt-ms-vss-work-web-work-hub-group-link"] > .navigation-icon {
+  display: none !important;
+}
+
+.navigation-section > .hub-group-container > a[aria-label="Pipelines"][id="__bolt-ms-vss-work-web-work-hub-group-link"] > .navigation-icon {
+  display: none !important;
+}
+
+.navigation-section > .hub-group-container > a[aria-label="Test Plans"][id="__bolt-ms-vss-work-web-work-hub-group-link"] > .navigation-icon {
+  display: none !important;
+}
+
+/* Overview image in collapsed sidebar turned into Jira Summary SVG */
+.navigation-section > .hub-group-container > .bolt-expandable-container:has(a > .navigation-icon > img[src="https://cdn.vsassets.io/ext/ms.vss-tfs-web/platform-content/Nav-Dashboard.S24hPD.png"])::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd' d='M1.543 7.25h2.722c.073-1.784.403-3.413.92-4.663q.123-.294.26-.566A6.5 6.5 0 0 0 1.544 7.25M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 1.5c-.151 0-.364.07-.632.344-.27.276-.547.714-.796 1.316-.432 1.043-.733 2.47-.805 4.09h4.466c-.072-1.62-.373-3.047-.805-4.09-.249-.602-.526-1.04-.796-1.316C8.364 1.571 8.15 1.5 8 1.5m3.735 5.75c-.073-1.784-.403-3.413-.92-4.663a8 8 0 0 0-.26-.566 6.5 6.5 0 0 1 3.902 5.229zm-1.502 1.5H5.767c.072 1.62.373 3.047.805 4.09.249.602.526 1.04.796 1.316.268.273.481.344.632.344s.364-.07.632-.344c.27-.276.547-.714.796-1.316.432-1.043.733-2.47.805-4.09m.321 5.229q.14-.272.26-.566c.518-1.25.848-2.879.92-4.663h2.723a6.5 6.5 0 0 1-3.903 5.229m-5.108 0q-.14-.272-.26-.566c-.518-1.25-.848-2.879-.92-4.663H1.542a6.5 6.5 0 0 0 3.903 5.229' clip-rule='evenodd'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Overview image in expanded sidebar turned into Jira Summary SVG */
+.navigation-section > .hub-group-container > a[aria-label="Overview"][id="__bolt-ms-vss-work-web-work-hub-group-link"]::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd' d='M1.543 7.25h2.722c.073-1.784.403-3.413.92-4.663q.123-.294.26-.566A6.5 6.5 0 0 0 1.544 7.25M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 1.5c-.151 0-.364.07-.632.344-.27.276-.547.714-.796 1.316-.432 1.043-.733 2.47-.805 4.09h4.466c-.072-1.62-.373-3.047-.805-4.09-.249-.602-.526-1.04-.796-1.316C8.364 1.571 8.15 1.5 8 1.5m3.735 5.75c-.073-1.784-.403-3.413-.92-4.663a8 8 0 0 0-.26-.566 6.5 6.5 0 0 1 3.902 5.229zm-1.502 1.5H5.767c.072 1.62.373 3.047.805 4.09.249.602.526 1.04.796 1.316.268.273.481.344.632.344s.364-.07.632-.344c.27-.276.547-.714.796-1.316.432-1.043.733-2.47.805-4.09m.321 5.229q.14-.272.26-.566c.518-1.25.848-2.879.92-4.663h2.723a6.5 6.5 0 0 1-3.903 5.229m-5.108 0q-.14-.272-.26-.566c-.518-1.25-.848-2.879-.92-4.663H1.542a6.5 6.5 0 0 0 3.903 5.229' clip-rule='evenodd'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Boards image in collapsed sidebar turned into Jira Dashboard SVG */
+.navigation-section > .hub-group-container > .bolt-expandable-container:has(a > .navigation-icon > img[src="https://cdn.vsassets.io/ext/ms.vss-work-web/common-content/Content/Nav-Plan.XB8qU6.png"])::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd' d='M3 2.5a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h4.25v-11zm5.75 0v4.75h4.75V3a.5.5 0 0 0-.5-.5zm4.75 6.25H8.75v4.75H13a.5.5 0 0 0 .5-.5zM1 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2z' clip-rule='evenodd'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Boards image in expanded sidebar turned into Jira Dashboard SVG */
+.navigation-section > .hub-group-container > a[aria-label="Boards"][id="__bolt-ms-vss-work-web-work-hub-group-link"]::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd' d='M3 2.5a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h4.25v-11zm5.75 0v4.75h4.75V3a.5.5 0 0 0-.5-.5zm4.75 6.25H8.75v4.75H13a.5.5 0 0 0 .5-.5zM1 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2z' clip-rule='evenodd'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Repos image in collapsed sidebar turned into Jira Code SVG */
+.navigation-section > .hub-group-container > .bolt-expandable-container:has(a > .navigation-icon > img[src="https://cdn.vsassets.io/ext/ms.vss-code-web/common-content/Nav-Code.0tJczm.png"])::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd' d='m4.315 14.445 6-13.5 1.37.61-6 13.5zM13.982 10l-2.925 2.145.886 1.21 3.75-2.75a.75.75 0 0 0 0-1.21l-3.75-2.75-.886 1.21zM2.018 6l2.926 2.145-.888 1.21-3.75-2.75a.75.75 0 0 1 0-1.21l3.75-2.75.888 1.21z' clip-rule='evenodd'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Repos image in expanded sidebar turned into Jira Code SVG */
+.navigation-section > .hub-group-container > a[aria-label="Repos"][id="__bolt-ms-vss-work-web-work-hub-group-link"]::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd' d='m4.315 14.445 6-13.5 1.37.61-6 13.5zM13.982 10l-2.925 2.145.886 1.21 3.75-2.75a.75.75 0 0 0 0-1.21l-3.75-2.75-.886 1.21zM2.018 6l2.926 2.145-.888 1.21-3.75-2.75a.75.75 0 0 1 0-1.21l3.75-2.75.888 1.21z' clip-rule='evenodd'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Pipelines image in collapsed sidebar turned into Jira Projects SVG */
+.navigation-section > .hub-group-container > .bolt-expandable-container:has(a > .navigation-icon > img[src="https://cdn.vsassets.io/ext/ms.vss-build-web/common-library/Nav-Launch.3tiJhd.png"])::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd' d='M13.5 3a.5.5 0 0 0-.5-.5h-2.482a.5.5 0 0 0-.354.146L7.78 5.03a.75.75 0 0 1-.53.22H3.018a.5.5 0 0 0-.354.146l-.353.354 1.72 1.72a.75.75 0 0 1 0 1.06l-2.25 2.25L.72 9.72 2.44 8 .72 6.28a.75.75 0 0 1 0-1.06l.884-.884a2 2 0 0 1 1.414-.586h3.921l2.165-2.164A2 2 0 0 1 10.518 1H13a2 2 0 0 1 2 2v2.482a2 2 0 0 1-.586 1.414L12.25 9.061v3.921a2 2 0 0 1-.586 1.415l-.884.883a.75.75 0 0 1-1.06 0L8 13.56l-1.72 1.72-1.06-1.06 2.25-2.25a.75.75 0 0 1 1.06 0l1.72 1.72.354-.354a.5.5 0 0 0 .146-.354V8.75a.75.75 0 0 1 .22-.53l2.384-2.384a.5.5 0 0 0 .146-.354zm-6.72 7.28-5 5-1.06-1.06 5-5z' clip-rule='evenodd'></path><path fill='rgb(80, 82, 88, 1)' d='M12.5 4.625a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Pipelines image in expanded sidebar turned into Jira Projects SVG */
+.navigation-section > .hub-group-container > a[aria-label="Pipelines"][id="__bolt-ms-vss-work-web-work-hub-group-link"]::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd' d='M13.5 3a.5.5 0 0 0-.5-.5h-2.482a.5.5 0 0 0-.354.146L7.78 5.03a.75.75 0 0 1-.53.22H3.018a.5.5 0 0 0-.354.146l-.353.354 1.72 1.72a.75.75 0 0 1 0 1.06l-2.25 2.25L.72 9.72 2.44 8 .72 6.28a.75.75 0 0 1 0-1.06l.884-.884a2 2 0 0 1 1.414-.586h3.921l2.165-2.164A2 2 0 0 1 10.518 1H13a2 2 0 0 1 2 2v2.482a2 2 0 0 1-.586 1.414L12.25 9.061v3.921a2 2 0 0 1-.586 1.415l-.884.883a.75.75 0 0 1-1.06 0L8 13.56l-1.72 1.72-1.06-1.06 2.25-2.25a.75.75 0 0 1 1.06 0l1.72 1.72.354-.354a.5.5 0 0 0 .146-.354V8.75a.75.75 0 0 1 .22-.53l2.384-2.384a.5.5 0 0 0 .146-.354zm-6.72 7.28-5 5-1.06-1.06 5-5z' clip-rule='evenodd'></path><path fill='rgb(80, 82, 88, 1)' d='M12.5 4.625a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Test Plans image in collapsed sidebar turned into Test Tube */
+.navigation-section > .hub-group-container > .bolt-expandable-container:has(a > .navigation-icon > img[src="https://cdn.vsassets.io/ext/ms.vss-test-web/common-content/Nav-Test.CLbC8L.png"])::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd'  stroke='rgb(80, 82, 88)' stroke-width='0.5' d='M12,1 L12,0.023 L6,0.023 C6,0.023 6,0.013 6,1 L7.012,1 L7.012,7 L3,15 C3,15 3,15.962 4,15.962 L14,15.962 C15,15.962 15,15 15,15 L10.958,7 L10.938,1 L12,1 L12,1 Z M14,15.031 L4,15.031 L8,7 L8,1 L10,1 L10,7 L14,15.031 L14,15.031 Z' clip-rule='evenodd'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Test Plans image in expanded sidebar turned into Test Tube */
+.navigation-section > .hub-group-container > a[aria-label="Test Plans"][id="__bolt-ms-vss-work-web-work-hub-group-link"]::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='-4 -4 24 24' width='30' height='30' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd'  stroke='rgb(80, 82, 88)' stroke-width='0.5' d='M12,1 L12,0.023 L6,0.023 C6,0.023 6,0.013 6,1 L7.012,1 L7.012,7 L3,15 C3,15 3,15.962 4,15.962 L14,15.962 C15,15.962 15,15 15,15 L10.958,7 L10.938,1 L12,1 L12,1 Z M14,15.031 L4,15.031 L8,7 L8,1 L10,1 L10,7 L14,15.031 L14,15.031 Z' clip-rule='evenodd'></path></svg>");
+  padding-left: 8px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+/* Artifacts image turned into Test Tube */
+.navigation-section > .hub-group-container > a[aria-label="Artifacts"]::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' width='20' height='20' role='presentation'><path fill='rgb(80, 82, 88, 1)' fill-rule='evenodd'  stroke='rgb(80, 82, 88)' stroke-width='1' d='M19.435,11.5h-2.72V4.56a1.5,1.5,0,0,0-1.5-1.5H8.785a1.5,1.5,0,0,0-1.5,1.5V11.5H4.565a1.5,1.5,0,0,0-1.5,1.5v6.44a1.5,1.5,0,0,0,1.5,1.5H11a1.468,1.468,0,0,0,1-.39,1.487,1.487,0,0,0,1,.39h6.44a1.5,1.5,0,0,0,1.5-1.5V13A1.5,1.5,0,0,0,19.435,11.5ZM11.5,19.44a.5.5,0,0,1-.5.5H4.565a.5.5,0,0,1-.5-.5V13a.5.5,0,0,1,.5-.5h1.97v2a.5.5,0,0,0,.5.5h1.5a.508.508,0,0,0,.5-.5v-2H11.5ZM8.285,11.5V4.56a.5.5,0,0,1,.5-.5h1.96v2a.5.5,0,0,0,.5.5h1.5a.5.5,0,0,0,.5-.5v-2h1.97a.5.5,0,0,1,.5.5V11.5Zm11.65,7.94a.508.508,0,0,1-.5.5H13a.508.508,0,0,1-.5-.5V12.5h2.47v2a.5.5,0,0,0,.5.5h1.5a.5.5,0,0,0,.5-.5v-2h1.97a.5.5,0,0,1,.5.5Z' clip-rule='evenodd'></path></svg>");
+  padding-left: 14px !important;
+  padding-right: 8px !important; /* Hide the chevron */
+}
+
+#__bolt-ms-vss-web-home-hub-group-link:hover {
+  background-color: transparent !important;
+}
+
 /* Primary Title of Project */
 .directory-selector-dropdown {
   font: normal 500 20pt / 24px 'Atlassian Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif !important;
@@ -101,6 +211,8 @@
 
 .kanban-board-column {
   border-top-color:#f4f4f4 !important;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
 }
 
 .work-item-state-container {
